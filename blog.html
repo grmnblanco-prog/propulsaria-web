@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — PropulsarIA</title>
+<meta name="description" content="Reflexiones, análisis y guías sobre implementación de IA: diagnóstico, captura de valor y las barreras reales que frenan a las organizaciones.">
+<link rel="canonical" href="https://propulsaria.com/blog.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Blog — PropulsarIA">
+<meta property="og:description" content="Reflexiones, análisis y guías sobre implementación de IA para organizaciones.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://propulsaria.com/blog.html">
+<meta property="og:image" content="https://propulsaria.com/public/logo-con-slogan.svg">
+<meta property="og:locale" content="es_CO">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — PropulsarIA">
+<meta name="twitter:description" content="Reflexiones, análisis y guías sobre implementación de IA para organizaciones.">
+
+<link rel="icon" href="public/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js'); window.addEventListener('DOMContentLoaded', function () { setTimeout(function () { var h = document.querySelector('.hero'); if (h) h.classList.add('cargado'); }, 400); });</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://propulsaria.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://propulsaria.com/blog.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Quieres implementar IA en tu empresa, pero no sabes por dónde empezar",
+    "description": "Implementar IA no es elegir una herramienta: es un proceso que empieza mucho antes, con un diagnóstico real de la organización.",
+    "author": {"@type": "Person", "name": "Germán Blanco Rodríguez", "sameAs": "https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez"},
+    "publisher": {"@type": "Organization", "name": "PropulsarIA"},
+    "datePublished": "2026-09-08",
+    "dateModified": "2026-09-14"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "¿Y cuándo la implementación de la IA no refleja lo esperado?",
+    "description": "El 88% de las empresas ya despliega IA, pero solo el 12% reporta reducción de costos y aumento de ingresos al mismo tiempo.",
+    "author": {"@type": "Person", "name": "Germán Blanco Rodríguez", "sameAs": "https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez"},
+    "publisher": {"@type": "Organization", "name": "PropulsarIA"},
+    "datePublished": "2026-09-14",
+    "dateModified": "2026-09-14"
+  }
+]
+</script>
+</head>
+<body>
+
+<header>
+<nav class="nav" aria-label="Navegación principal">
+  <div class="contenedor nav__interior">
+    <a href="index.html" class="nav__marca" aria-label="PropulsarIA. El portal de la Transformación.">
+      <img class="nav__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+    </a>
+    <ul class="nav__lista">
+      <li><a href="index.html" class="nav__enlace">Inicio</a></li>
+      <li><a href="metodologia.html" class="nav__enlace">Metodología</a></li>
+      <li><a href="servicios.html" class="nav__enlace">Servicios</a></li>
+      <li><a href="proyectos.html" class="nav__enlace">Proyectos</a></li>
+      <li><a href="blog.html" class="nav__enlace activo">Blog</a></li>
+      <li><a href="contacto.html" class="nav__enlace">Contacto</a></li>
+    </ul>
+    <button class="nav__hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero hero--paginas">
+  <div class="hero__respaldo" aria-hidden="true"></div>
+  <canvas class="hero__canvas" data-escena="blog" aria-hidden="true"></canvas>
+  <div class="hero__degradado"></div>
+  <div class="hero__contenido contenedor">
+    <div class="etiqueta-eyebrow">Pensamiento &amp; Metodología</div>
+    <h1><span class="reveal-linea titulo-hero"><span class="texto-degradado">Artículos &amp; Recursos</span></span></h1>
+    <p class="hero__eslogan">Guías para implementar IA con criterio: primero el diagnóstico, después el valor.</p>
+  </div>
+</section>
+
+<div class="divisor-neon" aria-hidden="true"></div>
+
+<section class="seccion">
+  <div class="blob blob--azul" style="width:500px;height:500px;top:0;right:-150px;"></div>
+  <div class="contenedor max-ancho-lg centrado-h">
+
+    <div class="blog-indice" id="blog-indice">
+      <a class="blog-tarjeta" href="#diagnostico">
+        <span class="blog-tarjeta__kicker">Implementación · Diagnóstico</span>
+        <h2>Quieres implementar IA en tu empresa, pero no sabes por dónde empezar</h2>
+        <p>Elegir la herramienta llega demasiado temprano. El proceso empieza con un mapa honesto de sistemas, datos, procesos y capacidad del equipo.</p>
+        <span class="blog-tarjeta__cta">Leer artículo →</span>
+      </a>
+      <a class="blog-tarjeta" href="#valor">
+        <span class="blog-tarjeta__kicker">Implementación · Valor</span>
+        <h2>¿Y cuándo la implementación de la IA no refleja lo esperado?</h2>
+        <p>El 88% ya despliega IA, pero solo el 12% captura retorno. La brecha no es de herramientas: es de barreras.</p>
+        <span class="blog-tarjeta__cta">Leer artículo →</span>
+      </a>
+    </div>
+
+    <article id="diagnostico" class="entrada-blog" itemscope itemtype="https://schema.org/Article" hidden style="margin-top:var(--space-md); background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-lg); box-shadow:var(--shadow-card);">
+      <button type="button" class="blog-volver" data-blog-volver>← Volver a los artículos</button>
+      <div class="entrada-blog__meta" style="margin-bottom:0.75rem;">
+        <span class="entrada-blog__categoria" style="color:var(--accent); font-weight:700;">Implementación · Diagnóstico</span>
+        <span>·</span>
+        <time datetime="2026-09-08" style="color:var(--ink-secondary);">8 de septiembre de 2026</time>
+        <span>·</span>
+        <span style="color:var(--ink-secondary);">8 min de lectura</span>
+      </div>
+      <h2 class="titulo-seccion" style="font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom:1.25rem;" itemprop="headline">Quieres implementar IA en tu empresa, pero no sabes por dónde empezar</h2>
+
+      <nav class="entrada-blog__toc" aria-label="En esta guía">
+        <a href="#diag-conversacion">La conversación equivocada</a>
+        <a href="#diag-preguntas">Cinco preguntas</a>
+        <a href="#diag-proceso">El proceso</a>
+      </nav>
+
+      <div class="entrada-blog__cuerpo">
+        <p class="parrafo-grande">Hay una conversación que se repite cada vez que una organización decide “meterse en IA”. No ocurre en un comité de tecnología. Ocurre en un pasillo, en un WhatsApp de gerencia o al final de una reunión que iba de otra cosa.</p>
+
+        <blockquote id="diag-conversacion" class="cita-blog">
+          <p>“Vamos a implementar IA. ¿Qué herramienta nos recomiendas? ¿ChatGPT, Claude, Gemini… o algo más específico?”</p>
+        </blockquote>
+
+        <p>La pregunta suena razonable. El mercado la refuerza todos los días: comparativos, rankings, demos de cinco minutos. El problema es que esa pregunta llega demasiado temprano. Elegir el modelo antes de entender el punto de partida es como comprar maquinaria sin saber qué produce la planta.</p>
+        <p>Implementar IA no es instalar una suscripción. Es un proceso que empieza mucho antes de la herramienta: con un mapa honesto de sistemas, datos, procesos y capacidad del equipo. Sin ese mapa, lo que se compra es actividad. Lo que se necesita es valor.</p>
+
+        <h3 id="diag-preguntas">Cinco preguntas que casi nadie tiene respondidas</h3>
+        <p>La mayoría de las organizaciones no llega vacía de tecnología. Llega con un CRM a medias, un ERP que “alguien administra”, correos que son el verdadero sistema de gestión y planillas que nadie se atreve a tocar. El diagnóstico no busca culpables. Busca evidencia.</p>
+
+        <div class="flujo-diagnostico" aria-label="Cinco preguntas del diagnóstico en secuencia">
+          <div class="flujo-diagnostico__paso">
+            <div class="flujo-diagnostico__eje">
+              <span class="flujo-diagnostico__num">1</span>
+              <span class="flujo-diagnostico__linea" aria-hidden="true"><span class="flujo-diagnostico__pulso"></span></span>
+            </div>
+            <div class="flujo-diagnostico__card">
+              <strong>¿Qué tan digitalizada está la organización hoy?</strong>
+              <p>No en el discurso, en la operación. Cuántos procesos siguen en papel, en Excel suelto o en la cabeza de una persona.</p>
+            </div>
+          </div>
+          <div class="flujo-diagnostico__paso">
+            <div class="flujo-diagnostico__eje">
+              <span class="flujo-diagnostico__num">2</span>
+              <span class="flujo-diagnostico__linea" aria-hidden="true"><span class="flujo-diagnostico__pulso"></span></span>
+            </div>
+            <div class="flujo-diagnostico__card">
+              <strong>¿Qué sistemas usa realmente el equipo?</strong>
+              <p>CRM, ERP, correo, repositorios, chats internos. Lo que aparece en el inventario de TI y lo que la gente abre cada mañana no siempre coinciden.</p>
+            </div>
+          </div>
+          <div class="flujo-diagnostico__paso">
+            <div class="flujo-diagnostico__eje">
+              <span class="flujo-diagnostico__num">3</span>
+              <span class="flujo-diagnostico__linea" aria-hidden="true"><span class="flujo-diagnostico__pulso"></span></span>
+            </div>
+            <div class="flujo-diagnostico__card">
+              <strong>¿Esos sistemas conversan entre sí?</strong>
+              <p>Si la información se copia a mano de un lado a otro, un agente de IA va a heredar el mismo cuello de botella, solo que más rápido y más caro.</p>
+            </div>
+          </div>
+          <div class="flujo-diagnostico__paso">
+            <div class="flujo-diagnostico__eje">
+              <span class="flujo-diagnostico__num">4</span>
+              <span class="flujo-diagnostico__linea" aria-hidden="true"><span class="flujo-diagnostico__pulso"></span></span>
+            </div>
+            <div class="flujo-diagnostico__card">
+              <strong>¿Dónde viven los datos y qué tan limpios están?</strong>
+              <p>Sin una base confiable no hay contexto. Y sin contexto la IA alucina con seguridad, que es peor que no tener IA.</p>
+            </div>
+          </div>
+          <div class="flujo-diagnostico__paso">
+            <div class="flujo-diagnostico__eje">
+              <span class="flujo-diagnostico__num">5</span>
+            </div>
+            <div class="flujo-diagnostico__card">
+              <strong>¿Qué procesos son candidatos reales a automatizarse?</strong>
+              <p>No los más “innovadores”. Los repetitivos, medibles y que hoy consumen tiempo de gente que podría estar decidiendo.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>La conversación pública sobre IA casi siempre habla de herramientas. Casi nunca habla de lo que hay que entender antes de elegirlas. Por eso tantas implementaciones se sienten ocupadas y, al mismo tiempo, vacías de resultado.</p>
+
+        <h3 id="diag-proceso">Lo que cambia cuando se diagnostica primero</h3>
+        <p>Un diagnóstico bien hecho no produce un informe para el archivo. Produce tres salidas concretas: qué no hay que tocar todavía, dónde hay un quick win en semanas, y qué capacidad hay que construir para que el equipo no dependa del consultor ni de un solo proveedor.</p>
+        <p>Esa es la diferencia entre “ya usamos ChatGPT” y “ya sabemos en qué proceso la IA nos ahorra tiempo, con qué dato y con quién se sostiene”. El primero es uso. El segundo es implementación.</p>
+
+        <div class="cita-blog">
+          <p>El problema de la IA no es la IA. Es que decidimos sobre ella sin entender de dónde partimos.</p>
+        </div>
+
+        <p style="font-size:1.2rem; font-weight:700; color:var(--accent); margin-top:1.5rem;">Antes de la herramienta está el diagnóstico.</p>
+        <p>Si tu organización está en ese punto —convencida de que hay que avanzar, insegura de por dónde—, el siguiente paso no es otra demo. Es una conversación corta para mapear el punto de partida.</p>
+        <p><a href="contacto.html" class="boton boton--primario" style="margin-top:0.6rem;">Agendar un diagnóstico</a></p>
+      </div>
+
+      <p class="entrada-blog__hashtags" style="margin-top:var(--space-md); color:var(--ink-secondary); font-size:0.9rem;">#IA #ImplementaciónIA #Empresas #TransformaciónDigital #Diagnóstico</p>
+
+      <div class="entrada-blog__recurso" style="margin-top:var(--space-md); padding:1rem 1.5rem; background:rgba(37,99,235,0.05); border:1px solid rgba(37,99,235,0.15); border-radius:var(--radius);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:36px; height:36px; color:var(--accent); flex-shrink:0;"><path d="M14 3v5h5"/><path d="M6 21h9a2 2 0 0 0 2-2V8l-5-5H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><polyline points="9.5 14.5 12 17 14.5 14.5"/></svg>
+        <div>
+          <strong style="font-size:1.05rem; display:block;">Carrusel Diagnóstico IA</strong>
+          <span style="color:var(--ink-secondary); font-size:0.9rem;">Presentación ejecutiva en PDF para compartir con tu equipo</span>
+        </div>
+        <a href="public/carruseles/carrusel_diagnostico_IA.pdf" download class="boton boton--primario" style="margin-left:auto; padding:0.6rem 1.3rem; font-size:0.92rem;">Descargar PDF</a>
+      </div>
+    </article>
+
+    <article id="valor" class="entrada-blog" itemscope itemtype="https://schema.org/Article" hidden style="margin-top:var(--space-md); background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--space-lg); box-shadow:var(--shadow-card);">
+      <button type="button" class="blog-volver" data-blog-volver>← Volver a los artículos</button>
+      <div class="entrada-blog__meta" style="margin-bottom:0.75rem;">
+        <span class="entrada-blog__categoria" style="color:var(--accent); font-weight:700;">Implementación · Valor</span>
+        <span>·</span>
+        <time datetime="2026-09-14" style="color:var(--ink-secondary);">14 de septiembre de 2026</time>
+        <span>·</span>
+        <span style="color:var(--ink-secondary);">9 min de lectura</span>
+      </div>
+      <h2 class="titulo-seccion" style="font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom:1.25rem;" itemprop="headline">¿Y cuándo la implementación de la IA no refleja lo esperado?</h2>
+
+      <nav class="entrada-blog__toc" aria-label="En esta guía">
+        <a href="#valor-brecha">La brecha 88 / 12</a>
+        <a href="#valor-barreras">Cuatro barreras</a>
+        <a href="#valor-hacer">Qué hacer primero</a>
+        <a href="#valor-recurso">Recurso</a>
+      </nav>
+
+      <div class="entrada-blog__cuerpo">
+        <p class="parrafo-grande">Una vez que las organizaciones implementan IA, la pregunta cambia. Ya no es “¿con qué herramienta empezamos?”. Es otra, más incómoda: <strong>¿estamos realmente capturando valor de esto?</strong></p>
+        <p>El diagnóstico evita comprar a ciegas. Pero diagnosticar no cierra el ciclo. El siguiente desafío es convertir uso en retorno: menos tiempo, menos costo, más calidad de decisión. Ahí es donde se cae la mayoría.</p>
+
+        <div id="valor-brecha" class="stat-destacada al-vista" style="border-left: 4px solid var(--accent); background: rgba(37,99,235,0.04); border-radius: var(--radius); padding: var(--space-md); margin: var(--space-md) 0;">
+          <div style="display:flex; gap:2rem; flex-wrap:wrap; align-items:center;">
+            <div>
+              <div class="stat-destacada__numero" data-hasta="88" data-desde="0" data-sufijo="%">88%</div>
+              <div class="stat-destacada__texto" style="font-size:0.9rem;">Empresas que ya despliegan IA</div>
+            </div>
+            <div style="font-size:1.5rem; color:var(--ink-secondary); font-weight:300;">vs</div>
+            <div>
+              <div class="stat-destacada__numero" data-hasta="12" data-desde="0" data-sufijo="%" style="background: linear-gradient(135deg, #10B981, #059669); -webkit-background-clip: text; color: transparent;">12%</div>
+              <div class="stat-destacada__texto" style="font-size:0.9rem;">Logran reducción de costos y aumento de ingresos al mismo tiempo</div>
+            </div>
+          </div>
+          <p style="margin-top:0.75rem; margin-bottom:0; color:var(--ink-secondary); font-size:0.95rem;">La adopción es casi universal. El valor, no.</p>
+        </div>
+
+        <p>Esa brecha no se explica por “falta de herramientas”. Se explica porque se implementó sobre un terreno que no estaba listo: equipos sin tiempo para integrar, procesos que no se rediseñaron, datos que no conversan y una gobernanza que no sabe cuándo un piloto ya debería ser operación.</p>
+
+        <h3 id="valor-barreras">Las cuatro barreras que frenan el retorno</h3>
+        <p>No hay que atacar las cuatro a la vez. Hay que identificar cuál está ahogando el caso de uso actual y empezar por ahí. El orden importa más que el presupuesto.</p>
+
+        <div class="grid-2 grupo-escalonado" style="margin: var(--space-md) 0; gap: 1rem;">
+          <div class="card al-vista barrera-card" style="padding: 1.25rem;">
+            <div style="font-size:1.6rem; font-weight:800; color:var(--accent); margin-bottom:0.25rem;">62%</div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Talento y brecha de habilidades</h3>
+            <p style="font-size:0.92rem; color:var(--ink-secondary); margin:0;">No faltan ingenieros. Falta que quienes ya operan el proceso tengan contexto, permiso y tiempo para incorporar IA en su trabajo real, no en un taller aislado.</p>
+          </div>
+          <div class="card al-vista barrera-card" style="padding: 1.25rem;">
+            <div style="font-size:1.6rem; font-weight:800; color:var(--accent); margin-bottom:0.25rem;">58%</div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Rediseño de flujos de trabajo</h3>
+            <p style="font-size:0.92rem; color:var(--ink-secondary); margin:0;">Pegar un chatbot sobre un trámite de doce pasos no elimina los doce pasos. El cuello de botella casi nunca es el modelo: es el proceso que nadie se atrevió a redibujar.</p>
+          </div>
+          <div class="card al-vista barrera-card" style="padding: 1.25rem;">
+            <div style="font-size:1.6rem; font-weight:800; color:var(--accent); margin-bottom:0.25rem;">52%</div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Calidad de datos</h3>
+            <p style="font-size:0.92rem; color:var(--ink-secondary); margin:0;">Los datos existen, pero están dispersos, desactualizados o no se hablan entre sistemas. Sin una base confiable, la IA no tiene contexto para operar con criterio.</p>
+          </div>
+          <div class="card al-vista barrera-card" style="padding: 1.25rem;">
+            <div style="font-size:1.6rem; font-weight:800; color:var(--accent); margin-bottom:0.25rem;">79%</div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Gobernanza y escalado</h3>
+            <p style="font-size:0.92rem; color:var(--ink-secondary); margin:0;">Pasar del piloto a producción con un KPI de retorno sigue siendo la frontera. Sin dueño, métrica y regla de paro, el piloto se vuelve eterno.</p>
+          </div>
+        </div>
+
+        <h3 id="valor-hacer">Capturar valor no es reportar uso</h3>
+        <p>Reportar número de consultas, licencias activas o “horas ahorradas estimadas” es fácil. Capturar valor pide otra disciplina: una métrica de negocio por caso de uso, una línea de base antes del piloto y una fecha en la que se decide escalar, ajustar o parar.</p>
+        <p>En la práctica, eso se ve así: un proceso de informes que pasa de tres días a medio; una bandeja de solicitudes con tiempo de respuesta medible; un expediente que deja de armase a mano. Nada de eso aparece si la organización solo cuenta prompts.</p>
+
+        <div class="cita-blog">
+          <p>La solución no es dejar de usar IA. Es preguntarse cuál barrera está frenando a tu organización — y atacarla primero.</p>
+        </div>
+
+        <p>Si ya invirtieron y el retorno no aparece, el siguiente paso no es otra herramienta. Es un diagnóstico de captura de valor: qué se implementó, qué se midió y qué hay que destrabar.</p>
+        <p><a href="contacto.html" class="boton boton--primario" style="margin-top:0.6rem;">Revisar tu implementación</a></p>
+      </div>
+
+      <p class="entrada-blog__hashtags" style="margin-top:var(--space-md); color:var(--ink-secondary); font-size:0.9rem;">#IA #ImplementaciónIA #EstrategiaIA #ProductividadEmpresarial #TransformaciónDigital</p>
+
+      <div id="valor-recurso" class="entrada-blog__recurso al-vista" style="margin-top:var(--space-md); padding:1rem 1.5rem; background:rgba(37,99,235,0.05); border:1px solid rgba(37,99,235,0.15); border-radius:var(--radius);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:36px; height:36px; color:var(--accent); flex-shrink:0;"><path d="M14 3v5h5"/><path d="M6 21h9a2 2 0 0 0 2-2V8l-5-5H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><polyline points="9.5 14.5 12 17 14.5 14.5"/></svg>
+        <div>
+          <strong style="font-size:1.05rem; display:block;">Carrusel Capturar Valor IA</strong>
+          <span style="color:var(--ink-secondary); font-size:0.9rem;">Presentación ejecutiva en PDF (8 láminas)</span>
+        </div>
+        <a href="public/carruseles/carrusel_capturar_valor_IA.pdf" download class="boton boton--primario" style="margin-left:auto; padding:0.6rem 1.3rem; font-size:0.92rem;">Descargar PDF</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div>
+        <a href="index.html" class="pie__marca-enlace" aria-label="PropulsarIA">
+          <img class="pie__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+        </a>
+        <p>Implementación de IA para organizaciones</p>
+        <p class="pie__redes">
+          <a class="icono-linkedin" href="https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="brochure.html" class="boton boton--secundario">Ver brochure</a>
+        </p>
+      </div>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="metodologia.html">Metodología</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="pie__base">
+      <span>© 2026 PropulsarIA</span>
+      <span>contacto@propulsaria.com · Bogotá, Colombia</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573152369917?text=Hola%20PropulsarIA%2C%20quiero%20conocer%20sus%20servicios%20de%20asesor%C3%ADa%20en%20implementaci%C3%B3n%20de%20IA%3A%20diagn%C3%B3stico%20organizacional%2C%20hoja%20de%20ruta%20y%20captura%20de%20valor%20para%20mi%20organizaci%C3%B3n." target="_blank" rel="noopener" class="whatsapp-flotante" aria-label="Escríbenos por WhatsApp">
+  <span class="whatsapp-flotante__texto">Escríbenos</span>
+  <span class="whatsapp-flotante__globo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.09c-.25.7-1.24 1.28-2.03 1.45-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.32-5.11-4.52-.15-.2-1.22-1.62-1.22-3.09s.76-2.19 1.03-2.49c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.52.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.22.57.35.08.13.08.72-.17 1.4z"/></svg>
+  </span>
+</a>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/hero-3d.js"></script>
+<script defer src="js/section-reveal.js"></script>
+<script defer src="js/background-3d.js"></script>
+<script defer src="js/blog.js"></script>
+</body>
+</html>

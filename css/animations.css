@@ -1,0 +1,283 @@
+/* ==========================================================================
+   PropulsarIA — animations.css v2
+   Keyframes y animaciones: neon, gradientes, counters, reveals dramáticos
+   ========================================================================== */
+
+/* ---------- Apariciones ---------- */
+
+@keyframes aparecerSubir {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aparecerEscalar {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes aparecerIzquierda {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes aparecerDerecha {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- Texto gradiente animado ---------- */
+
+@keyframes moverDegradadoTexto {
+  0%   { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* Gradiente de fondo animado para secciones */
+@keyframes gradienteSecciones {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Neon y glows ---------- */
+
+@keyframes brilloNeon {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(37,99,235,0.4)) drop-shadow(0 0 12px rgba(37,99,235,0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(96,165,250,0.7)) drop-shadow(0 0 25px rgba(37,99,235,0.4));
+  }
+}
+
+@keyframes pulsarBorde {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37,99,235,0); }
+}
+
+@keyframes pulsarPunto {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* ---------- Blob y fondos ---------- */
+
+@keyframes flotarBlob {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  25% { transform: translate(3%, 6%) scale(1.07) rotate(3deg); }
+  50% { transform: translate(6%, 2%) scale(1.04) rotate(-2deg); }
+  75% { transform: translate(-4%, 4%) scale(0.96) rotate(4deg); }
+}
+
+/* ---------- Separador de gradiente ---------- */
+
+@keyframes deslizarDegradado {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+/* ---------- WhatsApp ---------- */
+
+@keyframes pulsoWhatsapp {
+  0%, 100% {
+    box-shadow: 0 8px 28px -6px rgba(37,211,102,0.7), 0 0 0 0 rgba(37,211,102,0.5);
+  }
+  50% {
+    box-shadow: 0 8px 28px -6px rgba(37,211,102,0.7), 0 0 0 18px rgba(37,211,102,0);
+  }
+}
+
+/* ---------- Scroll line del hero ---------- */
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: 0.4; }
+  50%       { transform: scaleY(0.4); opacity: 0.9; }
+}
+
+/* ---------- Línea de proceso ---------- */
+
+@keyframes llenarLinea {
+  from { height: 0; }
+  to   { height: 100%; }
+}
+
+/* ---------- Contadores animados ---------- */
+
+/* Los counters se animan vía JS — aquí solo el estilo de transición */
+.stat-numero {
+  transition: color 0.3s;
+}
+
+/* ---------- Glow de íconos al entrar ---------- */
+
+.al-vista .card__icono,
+.al-vista .icono-sector,
+.al-vista .servicio__icono {
+  transition: filter var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out);
+}
+.al-vista.visible .card__icono,
+.al-vista.visible .icono-sector,
+.al-vista.visible .servicio__icono {
+  animation: brilloIcono 1.2s var(--ease-out);
+}
+@keyframes brilloIcono {
+  0%   { filter: drop-shadow(0 0 0 rgba(37,99,235,0)); }
+  35%  { filter: drop-shadow(0 0 14px rgba(37,99,235,0.7)); }
+  100% { filter: drop-shadow(0 0 0 rgba(37,99,235,0)); }
+}
+
+/* Escalonado de cards en grupo */
+.al-vista { transition-delay: var(--retraso, 0s); }
+
+/* ---------- Scanline sutil sobre canvas 3D ---------- */
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.025) 2px,
+    rgba(0, 0, 0, 0.025) 4px
+  );
+  pointer-events: none;
+  animation: scanMove 12s linear infinite;
+}
+@keyframes scanMove {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 100px; }
+}
+
+/* ---------- Datos volando (líneas de conexión) en cards oscuras ---------- */
+
+.card--glow-border {
+  position: relative;
+}
+.card--glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(37,99,235,0.5), transparent 40%, rgba(96,165,250,0.3), transparent 70%, rgba(37,99,235,0.5));
+  background-size: 200% 200%;
+  animation: bordeGirar 4s linear infinite;
+  z-index: -1;
+}
+@keyframes bordeGirar {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+/* ---------- Typing effect para subtítulos ---------- */
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-neon);
+  animation:
+    typing 2.5s steps(40, end) both,
+    blinkCursor 0.8s step-end infinite 2.5s;
+}
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blinkCursor {
+  0%, 100% { border-color: var(--accent-neon); }
+  50%       { border-color: transparent; }
+}
+
+/* ---------- Partículas de fondo (canvas 2D) ---------- */
+
+.particulas-sutiles canvas {
+  opacity: 0;
+  transition: opacity 1.4s var(--ease-out);
+}
+.particulas-sutiles.visible canvas { opacity: 1; }
+
+/* ---------- Animación de onda en wave-divider ---------- */
+
+.wave-divider--animado path {
+  animation: ondaPath 6s ease-in-out infinite alternate;
+}
+@keyframes ondaPath {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- Entrada especial para datos de stats ---------- */
+
+@keyframes contadorEntrada {
+  from { opacity: 0; transform: translateY(20px) scale(0.85); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.stat-item.visible .stat-numero {
+  animation: contadorEntrada 0.6s var(--ease-spring) both;
+}
+.stat-item.visible:nth-child(1) .stat-numero { animation-delay: 0.1s; }
+.stat-item.visible:nth-child(2) .stat-numero { animation-delay: 0.25s; }
+.stat-item.visible:nth-child(3) .stat-numero { animation-delay: 0.4s; }
+
+/* ---------- Línea divisora neon ---------- */
+
+.divisor-neon-animado {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(37,99,235,0.0) 10%,
+    rgba(37,99,235,0.8) 30%,
+    rgba(96,165,250,1) 50%,
+    rgba(37,99,235,0.8) 70%,
+    rgba(37,99,235,0.0) 90%,
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: neonPulse 3s ease-in-out infinite;
+  margin: 0;
+  position: relative;
+}
+.divisor-neon-animado::before {
+  content: '';
+  position: absolute;
+  inset: -3px -5%;
+  background: inherit;
+  filter: blur(6px);
+  opacity: 0.4;
+  border-radius: 50%;
+}
+@keyframes neonPulse {
+  0%, 100% { background-position: 100% 0; opacity: 0.6; }
+  50%       { background-position: 0% 0; opacity: 1; }
+}
+
+/* ---------- Accesibilidad: prefers-reduced-motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .divisor-degradado::before,
+  .texto-degradado,
+  .texto-degradado--oscuro,
+  .whatsapp-flotante__globo,
+  .blob,
+  .hero::after,
+  .card--glow-border::after,
+  .typing-effect,
+  .wave-divider--animado path,
+  .divisor-neon-animado,
+  .stat-numero,
+  .hero__scroll-badge span {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .texto-degradado,
+  .texto-degradado--oscuro {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: inherit;
+  }
+}

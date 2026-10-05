@@ -1,0 +1,29 @@
+{
+  "name": "propulsaria-remotion",
+  "version": "1.0.0",
+  "description": "Composiciones de video programático con Remotion para PropulsarIA",
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "build:hero": "remotion render HeroVideo public/videos/hero-bg.webm --codec=vp9",
+    "build:hero-mp4": "remotion render HeroVideo public/videos/hero-bg.mp4 --codec=h264",
+    "build:enfoque": "remotion render EnfoqueVideo public/videos/enfoque-proceso.webm --codec=vp9",
+    "build:enfoque-mp4": "remotion render EnfoqueVideo public/videos/enfoque-proceso.mp4 --codec=h264",
+    "build:enfoque-vertical": "remotion render src/index.ts EnfoqueVertical out/enfoque-proceso-vertical.mp4 --codec=h264",
+    "build:diagnostico-linkedin": "remotion render src/index.ts DiagnosticoLinkedIn out/diagnostico-linkedin.mp4 --codec=h264",
+    "build:estados-linkedin": "remotion render src/index.ts EstadosIALinkedIn out/estados-ia-linkedin.mp4 --codec=h264",
+    "build:estados-hook": "remotion render src/index.ts EstadosIAHook out/estados-ia-hook.mp4 --codec=h264",
+    "build:brochure-como": "remotion render src/index.ts BrochureComoAcompanamos out/brochure-como-acompanamos.mp4 --codec=h264",
+    "build:brochure-paso": "remotion render src/index.ts BrochurePrimerPaso out/brochure-primer-paso.mp4 --codec=h264",
+    "build:all": "npm run build:hero && npm run build:hero-mp4 && npm run build:enfoque && npm run build:enfoque-mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

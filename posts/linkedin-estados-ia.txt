@@ -1,0 +1,17 @@
+Usar IA y capturar valor no son el mismo estado.
+
+Hay gente que ya abre ChatGPT todos los días. Copia, pega, prueba. Eso es el estado 00: la IA responde y la persona hace el resto.
+
+El siguiente no es “mejor prompt”. Es que la IA ejecute la tarea y tú revises.
+
+Después: varias tareas a la vez. Ahí el cuello de botella ya no es el modelo: eres tú, si no hay verificación.
+
+Luego la IA arranca sola, con procesos escritos. Tú diriges el equipo, no cada clic.
+
+Recién ahí se parece a operación: intención, excepciones, métricas, costo. Implementar, no solo usar.
+
+En las organizaciones pasa lo mismo. El 88% ya “usa IA”. El 12% reporta reducción de costos y aumento de ingresos a la vez. La distancia no se explica por la herramienta. Se explica por el estado real: sistemas, datos, procesos y quién lo sostiene.
+
+¿En qué estado está tu operación —no tu discurso?
+
+Un diagnóstico gratuito: www.propulsaria.com

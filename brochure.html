@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brochure PropulsarIA — Agencia de implementación de Inteligencia Artificial</title>
+<meta name="description" content="Antes de la herramienta está el diagnóstico. Brochure de PropulsarIA: problema, para quién, proceso, servicios y diagnóstico gratuito.">
+<link rel="canonical" href="https://www.propulsaria.com/brochure.html">
+<link rel="icon" href="public/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --navy: #080E1A;
+    --navy-2: #0F172A;
+    --ink: #1E3A8A;
+    --body: #334155;
+    --muted: #64748B;
+    --accent: #2563EB;
+    --accent-2: #3B82F6;
+    --neon: #60A5FA;
+    --soft: #DBEAFE;
+    --border: rgba(37,99,235,0.18);
+    --white: #fff;
+    --font: "Fraunces", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #0B1220;
+    color: var(--body);
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  .toolbar {
+    position: sticky; top: 0; z-index: 30;
+    display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; align-items: center;
+    padding: 0.8rem 1rem; background: var(--navy); color: rgba(255,255,255,0.88); font-size: 0.88rem;
+  }
+  .toolbar button, .toolbar a {
+    font-family: var(--font); font-weight: 600; border: 0; border-radius: 999px;
+    padding: 0.42rem 0.95rem; background: var(--accent); color: #fff; text-decoration: none; cursor: pointer;
+  }
+  .toolbar a.sec { background: transparent; border: 1px solid rgba(96,165,250,0.45); }
+
+  .hoja {
+    width: 210mm; min-height: 297mm; margin: 18px auto;
+    background: var(--white);
+    box-shadow: 0 30px 80px -28px rgba(0,0,0,0.55);
+    overflow: hidden; display: flex; flex-direction: column; position: relative;
+  }
+
+  .cabecera {
+    position: relative; isolation: isolate;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 11mm 12mm 10mm; color: #fff;
+    background:
+      radial-gradient(ellipse at 78% 30%, rgba(37,99,235,0.45), transparent 42%),
+      radial-gradient(ellipse at 20% 120%, rgba(96,165,250,0.18), transparent 48%),
+      linear-gradient(180deg, #080E1A 0%, #0B1528 55%, #0F172A 100%);
+    overflow: hidden;
+    min-height: 38mm;
+  }
+  .cabecera canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.8; }
+  .cabecera::after {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(96,165,250,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96,165,250,0.07) 1px, transparent 1px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse at 80% 40%, #000 10%, transparent 72%);
+  }
+  .orb {
+    position: absolute; border-radius: 50%; z-index: 1; pointer-events: none; filter: blur(1px);
+    background: radial-gradient(circle at 30% 30%, rgba(147,197,253,0.55), rgba(37,99,235,0.05));
+    animation: flotar 9s ease-in-out infinite;
+  }
+  .orb--a { width: 140px; height: 140px; right: 6%; top: -40px; opacity: 0.4; }
+  .orb--b { width: 72px; height: 72px; right: 22%; bottom: -16px; opacity: 0.3; animation-delay: -3s; }
+  @keyframes flotar {
+    0%, 100% { transform: translate3d(0,0,0); }
+    50% { transform: translate3d(-12px, 10px, 0); }
+  }
+  .cabecera img, .cabecera p { position: relative; z-index: 2; }
+  .cabecera img {
+    height: 68px; width: auto; background: #fff; border-radius: 12px; padding: 6px 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+  }
+  .cabecera p {
+    font-size: 0.92rem; font-weight: 600; text-align: right; max-width: 280px;
+    color: #DBEAFE; line-height: 1.3;
+  }
+
+  .cuerpo { padding: 8mm 12mm 7mm; flex: 1; }
+  .hoja--p1 .cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 7mm;
+    padding: 7mm 12mm 8mm;
+  }
+  .hoja--p1 .bloque { flex: 0 0 auto; margin-top: 0; }
+  .hoja--p1 h1 { font-size: 1.48rem; margin-bottom: 0.32rem; }
+  .hoja--p1 .relato { font-size: 0.92rem; margin-bottom: 0.45rem; max-width: none; }
+  .hoja--p1 .metafora-brecha { margin-top: 0.2rem; padding: 0.7rem 0.8rem 0.65rem; }
+  .hoja--p1 .brecha-pista { gap: 0.38rem; }
+  .hoja--p1 .brecha-fila__pct { font-size: 1.02rem; }
+  .hoja--p1 .brecha-fila { grid-template-columns: 3.05rem 1fr; gap: 0.4rem; }
+  .hoja--p1 .brecha-fila__track { height: 24px; }
+  .hoja--p1 .brecha-fila__fill { font-size: 0.7rem; padding: 0 0.5rem; }
+  .hoja--p1 .brecha-compuesta { height: 28px; }
+  .hoja--p1 .brecha-compuesta__retorno,
+  .hoja--p1 .brecha-compuesta__fuga { font-size: 0.62rem; }
+  .hoja--p1 .brecha-nota { margin-top: 0.45rem; font-size: 0.76rem; }
+  .hoja--p1 .mapa {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 0;
+  }
+  .hoja--p1 .mapa .relato { margin-bottom: 0.35rem; }
+  .hoja--amplia .cuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10mm 12mm 10mm;
+    gap: 7mm;
+  }
+  .hoja--amplia h1 { font-size: 1.88rem; margin-bottom: 0.55rem; }
+  .hoja--amplia .relato { font-size: 1.06rem; margin-bottom: 0.5rem; max-width: none; }
+  .hoja--amplia .bloque { margin-top: 0; flex: 1; display: flex; flex-direction: column; }
+  .hoja--amplia .actores { flex: 1; align-items: stretch; margin-top: 0.9rem; gap: 0.75rem; }
+  .hoja--amplia .actores article { display: flex; flex-direction: column; }
+  .hoja--amplia .actores img { height: 128px; }
+  .hoja--amplia .actores div { padding: 0.85rem 0.85rem 1rem; flex: 1; }
+  .hoja--amplia .actores p { font-size: 0.9rem; }
+  .hoja--amplia .flujo-fases { flex: 1; margin: 1rem 0 0; align-items: start; }
+  .hoja--amplia .flujo-fases__paso { font-size: 0.9rem; padding: 0.68rem 0.25rem; }
+  .hoja--amplia .flujo-fases__item:not(:last-child)::after { top: 0.95rem; }
+  .hoja--amplia .flujo-fases__item p { font-size: 0.95rem; line-height: 1.42; }
+  .pie-pagina {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: 4.2mm 12mm; background: var(--navy-2); color: #93C5FD;
+    font-size: 0.72rem; font-weight: 650; letter-spacing: 0.04em;
+  }
+
+  .kicker {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.3rem;
+  }
+  h1, h2, h3 { font-family: var(--font); font-optical-sizing: auto; color: var(--ink); }
+  h1 { font-size: 1.62rem; line-height: 1.16; letter-spacing: -0.03em; margin-bottom: 0.45rem; }
+  h2 { font-size: 1.12rem; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+  h3 { font-size: 0.98rem; }
+  strong { color: var(--ink); font-weight: 700; }
+  .relato { font-size: 0.95rem; color: var(--body); max-width: 660px; margin-bottom: 0.42rem; }
+  .bloque { margin-top: 6mm; }
+  .bloque:first-child { margin-top: 0; }
+
+  .metafora-brecha {
+    margin-top: 0.75rem; padding: 1rem;
+    background: linear-gradient(180deg, #fff, #F8FBFF);
+    border: 1px solid var(--border); border-radius: 18px;
+    box-shadow: 0 18px 40px -24px rgba(37,99,235,0.55);
+  }
+  .brecha-pista { display: flex; flex-direction: column; gap: 0.58rem; }
+  .brecha-fila { display: grid; grid-template-columns: 3.8rem 1fr; gap: 0.65rem; align-items: center; }
+  .brecha-fila__pct { font-size: 1.2rem; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .brecha-fila__track { height: 36px; border-radius: 10px; background: #EEF2F7; overflow: hidden; }
+  .brecha-fila__fill {
+    height: 100%; border-radius: 10px; display: flex; align-items: center;
+    padding: 0 0.75rem; color: #0F172A; font-size: 0.8rem; font-weight: 650;
+  }
+  .brecha-fila__fill--100 { width: 100%; background: #DBEAFE; }
+  .brecha-fila__fill--88 { width: 88%; background: #93C5FD; }
+  .brecha-compuesta { display: flex; height: 44px; border-radius: 10px; overflow: hidden; }
+  .brecha-compuesta__retorno {
+    width: 12%; min-width: 4.3rem; background: #2563EB; color: #fff;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: 0.7rem; font-weight: 700; padding: 0 0.25rem; line-height: 1.15;
+  }
+  .brecha-compuesta__fuga {
+    width: 76%;
+    background: repeating-linear-gradient(-45deg, #FDE68A, #FDE68A 8px, #F59E0B 8px, #F59E0B 16px);
+    color: #78350F; display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: 0.8rem; font-weight: 800; padding: 0 0.45rem;
+  }
+  .brecha-compuesta__resto { width: 12%; background: #E2E8F0; }
+  .brecha-nota { margin: 0.7rem 0 0; font-size: 0.84rem; color: var(--muted); }
+  .brecha-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 0.75rem 1rem;
+    align-items: center;
+  }
+  .frenos-titulo {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.38rem;
+  }
+  .frenos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.32rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .frenos li {
+    font-size: 0.76rem;
+    color: var(--body);
+    line-height: 1.25;
+    background: #EFF6FF;
+    border-left: 3px solid #2563EB;
+    border-radius: 0 10px 10px 0;
+    padding: 0.32rem 0.6rem;
+  }
+  .frenos b { color: var(--ink); font-weight: 700; }
+
+  .mapa { margin-top: 5.5mm; }
+  .pasos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0.2rem 0 0;
+    padding: 0;
+    min-height: 0;
+    position: relative;
+  }
+  .pasos::before {
+    content: "";
+    position: absolute;
+    left: 0.92rem;
+    top: 1.15rem;
+    bottom: 1.15rem;
+    width: 2px;
+    background: linear-gradient(180deg, #60A5FA, #DBEAFE);
+  }
+  .pasos article {
+    display: grid;
+    grid-template-columns: 2.1rem 1fr;
+    column-gap: 0.85rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+    padding: 0.15rem 0;
+  }
+  .paso__n {
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.64rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #1D4ED8, #60A5FA);
+    box-shadow: 0 0 0 4px #fff;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .pasos h3 {
+    font-size: 1.05rem;
+    margin: 0;
+    padding-top: 0.22rem;
+    grid-column: 2;
+    line-height: 1.2;
+  }
+  .pasos p {
+    grid-column: 2;
+    font-size: 0.92rem;
+    color: var(--body);
+    line-height: 1.42;
+    margin: 0.12rem 0 0;
+  }
+  .pasos ul {
+    grid-column: 2;
+    margin: 0.18rem 0 0;
+    padding: 0 0 0 1rem;
+    font-size: 0.86rem;
+    color: var(--ink);
+    line-height: 1.38;
+  }
+  .pasos li::marker { color: #2563EB; }
+
+  .actores article,
+  .servicio {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(96,165,250,0.35);
+    background:
+      linear-gradient(180deg, rgba(37,99,235,0.08), rgba(255,255,255,0.96) 42%),
+      #fff;
+    box-shadow: 0 10px 28px -18px rgba(37,99,235,0.7);
+  }
+  .servicio::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, #60A5FA, #2563EB);
+  }
+  .actores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 0.65rem; }
+  .actores article { border-radius: 16px; }
+  .actores img { width: 100%; height: 78px; object-fit: cover; display: block; }
+  .actores div { padding: 0.6rem 0.7rem 0.75rem; }
+  .actores p { font-size: 0.82rem; color: var(--muted); margin-top: 0.18rem; }
+
+  .flujo-fases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.7rem 1.05rem;
+    align-items: start;
+    margin: 0.7rem 0 0.85rem;
+  }
+  .flujo-fases__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    min-width: 0;
+    position: relative;
+  }
+  .flujo-fases__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0.78rem;
+    left: calc(100% + 0.12rem);
+    width: 0.82rem;
+    height: 3px;
+    border-radius: 99px;
+    background: #93C5FD;
+  }
+  .flujo-fases__paso {
+    display: block; width: 100%; text-align: center; font-size: 0.78rem; font-weight: 700;
+    color: #fff; background: linear-gradient(135deg, #1D4ED8, #2563EB);
+    border-radius: 999px; padding: 0.48rem 0.2rem;
+    box-shadow: 0 8px 18px -10px rgba(37,99,235,0.9);
+  }
+  .flujo-fases__paso.activo { background: linear-gradient(135deg, #2563EB, #60A5FA); }
+  .flujo-fases__item p {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--body);
+    line-height: 1.38;
+    text-align: center;
+  }
+  .flujo-fases__linea {
+    display: none;
+  }
+  .flujo-fases__pulso {
+    position: absolute; inset: 0 auto 0 0; width: 8px; background: #fff;
+    box-shadow: 0 0 8px #60A5FA; animation: pulso 2.1s linear infinite;
+  }
+  @keyframes pulso { from { left: -8px; } to { left: 100%; } }
+
+  .servicios { display: grid; grid-template-columns: 1fr 1fr; gap: 0.58rem; margin-top: 0.7rem; }
+  .servicio { border-radius: 14px; padding: 0.72rem 0.75rem 0.78rem 0.95rem; }
+  .servicio .num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; color: var(--accent); }
+  .servicio h3 { margin: 0.08rem 0 0.22rem; }
+  .servicio p { font-size: 0.86rem; color: var(--body); }
+
+  .cierre {
+    margin-top: auto; padding: 6mm; border-radius: 18px; color: #fff;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 8mm; align-items: center;
+    position: relative; isolation: isolate; overflow: hidden;
+    background:
+      radial-gradient(ellipse at 80% 0%, rgba(37,99,235,0.45), transparent 46%),
+      linear-gradient(180deg, #080E1A 0%, #0F172A 100%);
+  }
+  .cierre canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.65; }
+  .cierre > * { position: relative; z-index: 1; }
+  .cierre h2 { color: #fff; font-size: 1.35rem; }
+  .cierre .relato { color: rgba(219,234,254,0.92); font-size: 0.9rem; margin: 0.35rem 0 0.8rem; }
+  .botones { display: flex; justify-content: center; }
+  .botones a {
+    display: inline-block; font-family: var(--font); font-weight: 700; font-size: 0.88rem;
+    text-decoration: none; border-radius: 999px; padding: 0.58rem 1.35rem;
+  }
+  .botones .pri { background: #2563EB; color: #fff; }
+  .qr-box {
+    display: flex; align-items: center; gap: 0.85rem;
+    background: rgba(255,255,255,0.96); color: var(--navy-2);
+    border-radius: 14px; padding: 0.7rem 0.8rem;
+  }
+  .qr-box img { width: 92px; height: 92px; background: #fff; border-radius: 8px; }
+  .qr-box p { font-size: 0.78rem; color: var(--navy-2); line-height: 1.35; }
+  .qr-box strong { display: block; font-size: 0.84rem; color: var(--ink); margin-bottom: 0.15rem; }
+
+  @media screen and (max-width: 900px) {
+    .hoja { width: min(100% - 16px, 210mm); min-height: auto; }
+    .brecha-layout, .actores, .servicios, .cierre, .flujo-fases { grid-template-columns: 1fr; }
+    .flujo-fases__item:not(:last-child)::after { display: none; }
+    .cabecera { flex-direction: column; align-items: flex-start; }
+    .cabecera p { text-align: left; }
+    .brecha-fila { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    html, body { background: #fff; }
+    .toolbar { display: none !important; }
+    .cabecera canvas, .cierre canvas, .orb { display: none !important; }
+    .flujo-fases__pulso { animation: none !important; }
+    * { box-shadow: none !important; text-shadow: none !important; filter: none !important; }
+    .hoja {
+      width: 210mm; height: 297mm; min-height: 297mm; margin: 0;
+      page-break-after: always; break-after: page;
+      overflow: visible;
+    }
+    .hoja:last-of-type { page-break-after: auto; break-after: auto; }
+    @page { size: A4 portrait; margin: 0; }
+    .actores article,
+    .servicio,
+    .metafora-brecha,
+    .qr-box {
+      overflow: visible;
+      background: #F8FBFF !important;
+      border: 1px solid #93C5FD !important;
+    }
+    .servicio::before {
+      background: #2563EB !important;
+    }
+    .flujo-fases { align-items: start; }
+    .flujo-fases__item {
+      background: transparent !important;
+      border: 0 !important;
+      overflow: visible;
+    }
+    .flujo-fases__item:not(:last-child)::after {
+      background: #93C5FD !important;
+    }
+    .flujo-fases__paso,
+    .flujo-fases__paso.activo {
+      background: #2563EB !important;
+      color: #fff !important;
+      border: 0 !important;
+    }
+    .cabecera img { box-shadow: none !important; }
+    .cabecera, .cierre, .pie-pagina, .servicio, .servicio::before, .paso__n, .frenos li,
+    .brecha-fila__fill, .brecha-compuesta__retorno, .brecha-compuesta__fuga,
+    .flujo-fases__paso, .actores article, .metafora-brecha, .qr-box {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .orb, .flujo-fases__pulso { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>Brochure · 3 páginas A4</span>
+    <button type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+    <a class="sec" href="index.html">Volver al sitio</a>
+  </div>
+
+  <article class="hoja hoja--p1" aria-label="Página 1">
+    <header class="cabecera">
+      <canvas data-red></canvas>
+      <span class="orb orb--a"></span><span class="orb orb--b"></span>
+      <img src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+      <p>Agencia de implementación de Inteligencia Artificial</p>
+    </header>
+    <div class="cuerpo">
+      <section class="bloque">
+        <p class="kicker">El punto de partida</p>
+        <h1>Implementar IA no es el desafío. Capturar valor, sí.</h1>
+        <p class="relato">Hoy algunas organizaciones ya usan IA. Otras lo están considerando. En ambos casos hay la misma distancia: entre <strong>adoptar una herramienta</strong> y <strong>ver resultados medibles</strong>.</p>
+
+        <figure class="metafora-brecha" aria-label="De adoptar IA a capturar valor">
+          <div class="brecha-layout">
+            <div class="brecha-pista">
+              <div class="brecha-fila">
+                <span class="brecha-fila__pct">100%</span>
+                <div class="brecha-fila__track"><div class="brecha-fila__fill brecha-fila__fill--100">organizaciones</div></div>
+              </div>
+              <div class="brecha-fila">
+                <span class="brecha-fila__pct">88%</span>
+                <div class="brecha-fila__track"><div class="brecha-fila__fill brecha-fila__fill--88">implementan IA</div></div>
+              </div>
+              <div class="brecha-fila">
+                <span class="brecha-fila__pct">76%</span>
+                <div class="brecha-fila__track">
+                  <div class="brecha-compuesta">
+                    <div class="brecha-compuesta__retorno">12% con retorno</div>
+                    <div class="brecha-compuesta__fuga">76% implementa y no captura valor</div>
+                    <div class="brecha-compuesta__resto"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frenos-col">
+              <p class="frenos-titulo">Lo que suele frenar el retorno</p>
+              <ul class="frenos">
+                <li><b>Talento</b> · habilidades y tiempo del equipo</li>
+                <li><b>Flujos</b> · procesos que no se rediseñaron</li>
+                <li><b>Datos</b> · calidad y conexión entre sistemas</li>
+                <li><b>Gobernanza</b> · del piloto a la operación</li>
+              </ul>
+            </div>
+          </div>
+          <p class="brecha-nota">Del 88% que ya usa IA, solo el 12% reporta reducción de costos y aumento de ingresos a la vez.</p>
+        </figure>
+      </section>
+
+      <section class="mapa">
+        <p class="kicker">El mapa, antes de la herramienta</p>
+        <p class="relato">Si todavía no empezaste, no elijas herramienta. Si ya empezaste y no ves valor, tampoco. En ambos casos la historia se lee igual, en este orden.</p>
+        <div class="pasos" aria-label="Cinco lecturas del diagnóstico">
+          <article>
+            <span class="paso__n">01</span>
+            <h3>Digitalización</h3>
+            <p>La historia no empieza en la herramienta: empieza en cómo trabaja el equipo hoy, no en el discurso.</p>
+            <ul><li>Papel, Excel suelto o lo que vive en la cabeza de una persona.</li></ul>
+          </article>
+          <article>
+            <span class="paso__n">02</span>
+            <h3>Sistemas</h3>
+            <p>Después, qué abre de verdad cada mañana —no lo que aparece en el inventario de TI.</p>
+            <ul><li>CRM, ERP, correo, chats: lo declarado y lo usado no siempre coinciden.</li></ul>
+          </article>
+          <article>
+            <span class="paso__n">03</span>
+            <h3>Integración</h3>
+            <p>Si esos sistemas no conversan, un agente de IA hereda el mismo cuello de botella.</p>
+            <ul><li>Copiar a mano se vuelve más rápido y más caro, no más inteligente.</li></ul>
+          </article>
+          <article>
+            <span class="paso__n">04</span>
+            <h3>Datos</h3>
+            <p>Dónde viven y qué tan limpios están. Sin una base confiable no hay contexto.</p>
+            <ul><li>Y sin contexto la IA improvisa: peor que no tener IA.</li></ul>
+          </article>
+          <article>
+            <span class="paso__n">05</span>
+            <h3>Procesos</h3>
+            <p>Recién aquí se elige dónde aplicar IA: lo repetitivo y medible, no lo más “innovador”.</p>
+            <ul><li>Lo que hoy consume tiempo de gente que podría estar decidiendo.</li></ul>
+          </article>
+        </div>
+      </section>
+    </div>
+    <footer class="pie-pagina">
+      <span>www.propulsaria.com</span>
+      <span>Página 1 de 3</span>
+    </footer>
+  </article>
+
+  <article class="hoja hoja--amplia" aria-label="Página 2">
+    <header class="cabecera">
+      <canvas data-red></canvas>
+      <span class="orb orb--a"></span><span class="orb orb--b"></span>
+      <img src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+      <p>Agencia de implementación de Inteligencia Artificial</p>
+    </header>
+    <div class="cuerpo">
+      <section class="bloque">
+        <p class="kicker">Para quién</p>
+        <h1>No es un caso de laboratorio. Es operación real.</h1>
+        <p class="relato">Trabajamos con quien ya tiene procesos, equipos y sistemas en marcha.</p>
+        <div class="actores">
+          <article>
+            <img src="public/sectores/sector-publico.jpg" alt="">
+            <div>
+              <h3>Sector público</h3>
+              <p>MGA, regalías, planeación y gestión documental que no puede improvisar.</p>
+            </div>
+          </article>
+          <article>
+            <img src="public/sectores/sector-empresas.jpg" alt="">
+            <div>
+              <h3>Empresas</h3>
+              <p>Ya probaron IA. El siguiente paso es ver el retorno.</p>
+            </div>
+          </article>
+          <article>
+            <img src="public/sectores/sector-cooperacion.jpg" alt="">
+            <div>
+              <h3>Cooperación</h3>
+              <p>Formular, financiar y rendir cuentas con menos fricción.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bloque">
+        <p class="kicker">El proceso</p>
+        <h2>Por eso no empezamos por la herramienta.</h2>
+        <p class="relato">Empezamos por entender el punto de partida. Después viene el camino, una ganancia visible y el escalado.</p>
+        <div class="flujo-fases" aria-label="Diagnóstico, hoja de ruta, quick wins y escalado">
+          <div class="flujo-fases__item">
+            <span class="flujo-fases__paso activo">Diagnóstico</span>
+            <p>Sistemas, datos, procesos candidatos y quién en el equipo puede sostenerlo.</p>
+          </div>
+          <div class="flujo-fases__item">
+            <span class="flujo-fases__paso">Hoja de ruta</span>
+            <p>Se construye a medida sobre lo diagnosticado, sin casarnos con un solo proveedor.</p>
+          </div>
+          <div class="flujo-fases__item">
+            <span class="flujo-fases__paso">Quick wins</span>
+            <p>Correo, calendario, reuniones e informes. En semanas, no en meses.</p>
+          </div>
+          <div class="flujo-fases__item">
+            <span class="flujo-fases__paso">Escalado</span>
+            <p>Del piloto a la operación, con métricas y un equipo que ya no depende del consultor.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="pie-pagina">
+      <span>www.propulsaria.com</span>
+      <span>Página 2 de 3</span>
+    </footer>
+  </article>
+
+  <article class="hoja" aria-label="Página 3">
+    <header class="cabecera">
+      <canvas data-red></canvas>
+      <span class="orb orb--a"></span><span class="orb orb--b"></span>
+      <img src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+      <p>Agencia de implementación de Inteligencia Artificial</p>
+    </header>
+    <div class="cuerpo" style="display:flex;flex-direction:column;">
+      <p class="kicker">Cómo acompañamos</p>
+      <h1>Ocho maneras de seguir, según dónde estés hoy.</h1>
+      <p class="relato">No hay un paquete cerrado. Hay un criterio: elegir la herramienta después de entender el proceso. Neutralidad frente a marcas. Metodología que se transfiere. El equipo queda operando.</p>
+
+      <div class="servicios">
+        <article class="servicio">
+          <span class="num">01</span>
+          <h3>Consultoría de implementación</h3>
+          <p>Diagnóstico, hoja de ruta y pilotos. El mapa antes de la herramienta.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">02</span>
+          <h3>Agentes de procesos</h3>
+          <p>Atención, informes, documentos y RAG, conectados a lo que ya usan.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">03</span>
+          <h3>Agentes de productividad</h3>
+          <p>Agenda, redacción, reuniones y el trabajo diario que hoy se copia a mano.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">04</span>
+          <h3>IA local</h3>
+          <p>Modelos en infraestructura propia. Los datos no salen de la organización.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">05</span>
+          <h3>Desarrollo a la medida</h3>
+          <p>Aplicaciones, APIs y prototipos con el proveedor que sí convenga.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">06</span>
+          <h3>Páginas web</h3>
+          <p>Sitios y landings, con asistentes de IA cuando el proceso lo pide.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">07</span>
+          <h3>Automatizaciones</h3>
+          <p>Correo, calendario, CRM e informes hablando entre sí.</p>
+        </article>
+        <article class="servicio">
+          <span class="num">08</span>
+          <h3>Academia PropulsarIA</h3>
+          <p>El equipo aprende a elegir y diseñar, sin quedar atado a un proveedor.</p>
+        </article>
+      </div>
+
+      <section class="cierre">
+        <canvas data-red></canvas>
+        <div>
+          <p class="kicker" style="color:#93C5FD;">El primer paso</p>
+          <h2>Un diagnóstico gratuito.</h2>
+          <p class="relato">No es un contrato. Es una conversación sobre procesos, datos, talento y gobernanza. Sin compromiso y sin maratones de reuniones.</p>
+          <div class="botones">
+            <a class="pri" href="https://www.propulsaria.com/contacto.html">Agendar conversación</a>
+          </div>
+        </div>
+        <div class="qr-box">
+          <img src="public/qr-web.png" alt="Código QR hacia www.propulsaria.com" width="180" height="180">
+          <p><strong>Escanea y entra</strong>www.propulsaria.com<br>contacto@propulsaria.com<br>+57 315 236 9917</p>
+        </div>
+      </section>
+    </div>
+    <footer class="pie-pagina">
+      <span>www.propulsaria.com · +57 315 236 9917</span>
+      <span>Página 3 de 3</span>
+    </footer>
+  </article>
+
+  <script>
+    (function () {
+      var pasos = document.querySelectorAll(".flujo-fases__paso");
+      if (pasos.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        var i = 0;
+        setInterval(function () {
+          pasos.forEach(function (p) { p.classList.remove("activo"); });
+          i = (i + 1) % pasos.length;
+          pasos[i].classList.add("activo");
+        }, 1600);
+      }
+      function red(canvas) {
+        var ctx = canvas.getContext("2d");
+        var nodos = [], w, h, t = 0;
+        function medir() {
+          w = canvas.clientWidth; h = canvas.clientHeight;
+          if (!w || !h) return;
+          canvas.width = w * devicePixelRatio;
+          canvas.height = h * devicePixelRatio;
+          ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+          nodos = [];
+          var n = Math.max(16, Math.floor(w / 26));
+          for (var i = 0; i < n; i++) {
+            nodos.push({
+              x: Math.random() * w, y: Math.random() * h,
+              vx: (Math.random() - 0.5) * 0.32, vy: (Math.random() - 0.5) * 0.32,
+              r: 1.3 + Math.random() * 1.7
+            });
+          }
+        }
+        function tick() {
+          if (!w) return;
+          ctx.clearRect(0, 0, w, h);
+          t += 0.01;
+          nodos.forEach(function (a, i) {
+            a.x += a.vx; a.y += a.vy;
+            if (a.x < 0 || a.x > w) a.vx *= -1;
+            if (a.y < 0 || a.y > h) a.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(147,197,253," + (0.4 + Math.sin(t + i) * 0.2) + ")";
+            ctx.fill();
+            for (var j = i + 1; j < nodos.length; j++) {
+              var b = nodos[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+              if (d < 88) {
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+                ctx.strokeStyle = "rgba(96,165,250," + (0.18 * (1 - d / 88)) + ")";
+                ctx.stroke();
+              }
+            }
+          });
+          requestAnimationFrame(tick);
+        }
+        medir();
+        window.addEventListener("resize", medir);
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) tick();
+      }
+      document.querySelectorAll("canvas[data-red]").forEach(red);
+    })();
+  </script>
+</body>
+</html>

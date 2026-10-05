@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PropulsarIA — Implementación de IA para organizaciones</title>
+<meta name="description" content="Consultoría de implementación de IA. Diagnóstico, hoja de ruta, agentes y formación para sector público, empresas y cooperación internacional.">
+<link rel="canonical" href="https://propulsaria.com/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PropulsarIA — Implementación de IA para organizaciones">
+<meta property="og:description" content="Antes de la herramienta está el diagnóstico. Diagnóstico, hoja de ruta, agentes de IA y formación para organizaciones.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://propulsaria.com/">
+<meta property="og:image" content="https://propulsaria.com/public/logo.svg">
+<meta property="og:locale" content="es_CO">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PropulsarIA — Implementación de IA para organizaciones">
+<meta name="twitter:description" content="Antes de la herramienta está el diagnóstico. Diagnóstico, hoja de ruta, agentes de IA y formación para organizaciones.">
+<meta name="twitter:image" content="https://propulsaria.com/public/logo.svg">
+
+<link rel="icon" href="public/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js'); window.addEventListener('DOMContentLoaded', function () { setTimeout(function () { var h = document.querySelector('.hero'); if (h) h.classList.add('cargado'); }, 400); });</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PropulsarIA",
+  "description": "Consultoría de implementación de inteligencia artificial para organizaciones: diagnóstico, hoja de ruta, agentes de IA, automatización y formación.",
+  "url": "https://propulsaria.com/",
+  "logo": "https://propulsaria.com/public/logo-con-slogan.svg",
+  "sameAs": ["https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez"],
+  "email": "contacto@propulsaria.com",
+  "areaServed": "CO",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contacto@propulsaria.com",
+    "telephone": "+57-315-236-9917",
+    "contactType": "customer service"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+  }
+}
+</script>
+
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PropulsarIA",
+  "url": "https://propulsaria.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://propulsaria.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVEGACIÓN
+     ============================================================ -->
+<header>
+<nav class="nav" aria-label="Navegación principal">
+  <div class="contenedor nav__interior">
+    <a href="index.html" class="nav__marca" aria-label="PropulsarIA. El portal de la Transformación.">
+      <img class="nav__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+    </a>
+    <ul class="nav__lista">
+      <li><a href="index.html" class="nav__enlace activo" data-spy="hero">Inicio</a></li>
+      <li><a href="metodologia.html" class="nav__enlace">Metodología</a></li>
+      <li><a href="servicios.html" class="nav__enlace">Servicios</a></li>
+      <li><a href="proyectos.html" class="nav__enlace">Proyectos</a></li>
+      <li><a href="blog.html" class="nav__enlace">Blog</a></li>
+      <li><a href="contacto.html" class="nav__enlace">Contacto</a></li>
+    </ul>
+    <button class="nav__hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<!-- ============================================================
+     SECCIÓN 1 — HERO
+     ============================================================ -->
+<section class="hero" data-seccion="hero">
+  <div class="hero__respaldo" aria-hidden="true"></div>
+  <canvas class="hero__canvas" data-escena="inicio" aria-hidden="true"></canvas>
+  <div class="hero__degradado"></div>
+  <div class="hero__contenido contenedor">
+    <div class="etiqueta-eyebrow">Agencia de implementación de Inteligencia Artificial</div>
+    <h1>
+      <span class="reveal-linea titulo-hero"><span class="texto-degradado">Implementación de IA</span></span>
+      <span class="reveal-linea titulo-hero"><span>para organizaciones.</span></span>
+    </h1>
+    <p class="hero__eslogan">Antes de la herramienta está el diagnóstico.</p>
+    <div class="hero__acciones">
+      <a href="contacto.html" class="boton boton--primario">Conversemos</a>
+      <a href="metodologia.html" class="hero__enlace-secundario">Conoce nuestra metodología</a>
+      <a href="brochure.html" class="boton boton--secundario">Ver brochure</a>
+    </div>
+  </div>
+</section>
+
+<!-- Separador Hero -> Brecha -->
+<div class="divisor-neon" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SECCIÓN 2 — LA BRECHA
+     ============================================================ -->
+<section class="seccion" data-seccion="brecha">
+  <div class="blob blob--azul" style="width:520px;height:520px;top:-120px;right:-160px;"></div>
+  <div class="contenedor">
+    <div class="al-vista max-ancho-lg centrado-h">
+      <h2 class="titulo-seccion texto-centrado">Implementar IA no es el desafío. Capturar valor, sí.</h2>
+      <p class="parrafo-grande">
+        Hoy algunas organizaciones ya usan inteligencia artificial en sus procesos.
+        Otras están considerándolo. Y muchas no saben por dónde empezar.
+      </p>
+      <p class="parrafo-grande">
+        Pero en todos los casos hay una pregunta en común: entre adoptar una herramienta
+        y obtener resultados medibles hay una distancia que no todos logran cerrar.
+      </p>
+      <p class="parrafo-grande">
+        El problema no es tecnológico. Es que se decide sobre IA sin un diagnóstico real
+        de lo que la organización necesita, sin una hoja de ruta clara y sin entender
+        cómo capturar el valor de lo que se implementa.
+      </p>
+
+      <figure class="metafora-brecha al-vista" aria-label="De adoptar IA a capturar valor">
+        <div class="brecha-pista">
+          <div class="brecha-fila">
+            <span class="brecha-fila__pct">100%</span>
+            <div class="brecha-fila__track">
+              <div class="brecha-fila__fill brecha-fila__fill--100">organizaciones</div>
+            </div>
+          </div>
+          <div class="brecha-fila">
+            <span class="brecha-fila__pct">88%</span>
+            <div class="brecha-fila__track">
+              <div class="brecha-fila__fill brecha-fila__fill--88">implementan IA</div>
+            </div>
+          </div>
+          <div class="brecha-fila">
+            <span class="brecha-fila__pct">76%</span>
+            <div class="brecha-fila__track" aria-hidden="true">
+              <div class="brecha-compuesta">
+                <div class="brecha-compuesta__retorno">12% con retorno</div>
+                <div class="brecha-compuesta__fuga">76% implementa y no captura valor</div>
+                <div class="brecha-compuesta__resto" title="Aún no implementan"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="brecha-nota">La brecha es 76 puntos: del 88% que ya usa IA, solo el 12% reporta reducción de costos y aumento de ingresos a la vez.</p>
+        <p class="brecha-barreras-titulo">Lo que frena el retorno</p>
+        <div class="brecha-barreras">
+          <article><strong>Talento</strong><span>Habilidades y tiempo del equipo</span></article>
+          <article><strong>Flujos</strong><span>Procesos que no se rediseñaron</span></article>
+          <article><strong>Datos</strong><span>Calidad y conexión entre sistemas</span></article>
+          <article><strong>Gobernanza</strong><span>Del piloto a la operación</span></article>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider antes de sección oscura El Enfoque -->
+<div class="wave-divider wave-divider--animado" style="color: var(--bg-dark); margin-bottom: -2px;" aria-hidden="true">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+    <path d="M0,32 C320,0 640,64 960,32 C1280,0 1440,48 1440,48 L1440,120 L0,120 Z"></path>
+  </svg>
+</div>
+
+<!-- ============================================================
+     SECCIÓN 3 — EL ENFOQUE (PROCESO + RED NEURONAL CANVAS)
+     ============================================================ -->
+<section class="seccion seccion--oscura seccion-enfoque seccion-enfoque--resumen" id="enfoque" data-seccion="enfoque">
+  <div class="enfoque-fondo" aria-hidden="true">
+    <div class="neural-canvas-wrapper" id="neural-canvas-wrapper">
+      <canvas id="neural-canvas"></canvas>
+    </div>
+    <div class="enfoque-fondo__velo"></div>
+  </div>
+  <div class="contenedor enfoque-contenido">
+    <div class="al-vista texto-centrado">
+      <h2 class="titulo-seccion" style="color:var(--white);">Un proceso, no una herramienta.</h2>
+      <div class="flujo-fases" aria-label="Diagnóstico, hoja de ruta, quick wins y escalado">
+        <span class="flujo-fases__paso activo">Diagnóstico</span>
+        <span class="flujo-fases__linea" aria-hidden="true"><span class="flujo-fases__pulso"></span></span>
+        <span class="flujo-fases__paso">Hoja de ruta</span>
+        <span class="flujo-fases__linea" aria-hidden="true"><span class="flujo-fases__pulso"></span></span>
+        <span class="flujo-fases__paso">Quick wins</span>
+        <span class="flujo-fases__linea" aria-hidden="true"><span class="flujo-fases__pulso"></span></span>
+        <span class="flujo-fases__paso">Escalado</span>
+      </div>
+      <div class="enfoque-resumen__acciones">
+        <a href="metodologia.html" class="boton boton--primario">Conoce nuestra metodología</a>
+        <a href="brochure.html" class="boton boton--secundario">Ver brochure</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider saliendo de sección oscura a clara -->
+<div class="wave-divider wave-divider--animado" style="color: var(--bg-light); transform: rotate(180deg); margin-top: -2px;" aria-hidden="true">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+    <path d="M0,32 C320,0 640,64 960,32 C1280,0 1440,48 1440,48 L1440,120 L0,120 Z"></path>
+  </svg>
+</div>
+
+<!-- ============================================================
+     SECCIÓN 4 — ¿PARA QUIÉN?
+     ============================================================ -->
+<section class="seccion" data-seccion="para-quien">
+  <div class="blob blob--azul-claro" style="width:460px;height:460px;bottom:-100px;left:-140px;"></div>
+  <div class="contenedor">
+    <div class="al-vista texto-centrado max-ancho centrado-h">
+      <h2 class="titulo-seccion">¿Para quién es esto?</h2>
+      <p class="subtitulo-seccion">Soluciones concebidas para la realidad operativa de tres sectores clave.</p>
+    </div>
+    <div class="tarjetas-para-quien grupo-escalonado" style="margin-top:var(--space-lg);">
+      <article class="card card--actor al-vista">
+        <div class="card__foto"><img src="public/sectores/sector-publico.jpg" alt="Edificio institucional y espacio público" width="640" height="480"></div>
+        <div class="card__cuerpo">
+          <h3 class="card__titulo">Sector público</h3>
+          <p>Planeación territorial, MGA, regalías, fortalecimiento institucional y optimización de gestión documental.</p>
+        </div>
+      </article>
+      <article class="card card--actor al-vista">
+        <div class="card__foto"><img src="public/sectores/sector-empresas.jpg" alt="Equipo de una empresa colaborando en oficina" width="640" height="480"></div>
+        <div class="card__cuerpo">
+          <h3 class="card__titulo">Empresas</h3>
+          <p>Organizaciones que ya implementaron IA pero no ven el retorno esperado. Diagnóstico, hoja de ruta, agentes y automatización.</p>
+        </div>
+      </article>
+      <article class="card card--actor al-vista">
+        <div class="card__foto"><img src="public/sectores/sector-cooperacion.jpg" alt="Equipo de cooperación internacional en una sesión de trabajo" width="640" height="480"></div>
+        <div class="card__cuerpo">
+          <h3 class="card__titulo">Cooperación</h3>
+          <p>ONGs, agencias, organismos multilaterales. CooperarIA, formulación ágil de proyectos y rendición de cuentas.</p>
+        </div>
+      </article>
+    </div>
+    <div class="para-quien__cta">
+      <a href="contacto.html" class="boton boton--primario">Conversemos</a>
+    </div>
+  </div>
+</section>
+
+<!-- Divisor hacia Diferenciador -->
+<div class="divisor-neon" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SECCIÓN 5 — DIFERENCIADOR
+     ============================================================ -->
+<section class="seccion seccion--oscura seccion--80" data-seccion="diferenciador">
+  <div class="particulas-sutiles"></div>
+  <div class="blob blob--neon" style="width:500px;height:500px;top:10%;left:25%;"></div>
+  <div class="contenedor" style="position:relative;z-index:1;">
+    <div class="al-vista max-ancho-lg centrado-h">
+      <p class="cita-grande texto-centrado">"No es solo implementar. Es implementar con criterio."</p>
+      <ul class="lista-diferenciador" style="margin-top: var(--space-md);">
+        <li><strong>Sin ataduras a proveedores:</strong> No nos casamos con un solo proveedor (ChatGPT, Claude, Gemini, DeepSeek o modelos abiertos). Evaluamos según la necesidad real.</li>
+        <li><strong>Metodología abierta:</strong> No ocultamos la metodología; la transferimos como parte integral del servicio.</li>
+        <li><strong>Autonomía real:</strong> No dejamos al equipo dependiendo de nosotros. Lo capacitamos para que opere y tome decisiones solo.</li>
+        <li><strong>Impacto comprobable:</strong> Medimos resultados cuantitativos y ROI, no solo volumen de actividad o consultas reportadas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Divisor hacia CTA -->
+<div class="divisor-degradado" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SECCIÓN 6 — CTA FINAL
+     ============================================================ -->
+<section class="seccion cta-especial" data-seccion="cta">
+  <div class="blob blob--azul" style="width:480px;height:480px;top:-80px;right:-150px;"></div>
+  <div class="contenedor texto-centrado" style="position:relative;z-index:1;">
+    <div class="al-vista">
+      <h2 class="titulo-seccion" style="color:var(--white);">¿Listo para empezar?</h2>
+      <p class="subtitulo-seccion max-ancho centrado-h" style="color:rgba(255,255,255,0.7);">El primer paso es conversar. Sin compromiso, sin maratones de reuniones.</p>
+    </div>
+    <form class="formulario-card al-vista centrado-h" style="text-align:left;" id="formulario-contacto" action="mailto:contacto@propulsaria.com" method="post" enctype="text/plain">
+      <div class="campo">
+        <label for="ci-nombre">Nombre</label>
+        <input type="text" id="ci-nombre" name="nombre" required placeholder="Tu nombre o empresa">
+      </div>
+      <div class="campo">
+        <label for="ci-correo">Correo electrónico</label>
+        <input type="email" id="ci-correo" name="correo" required placeholder="correo@organizacion.com">
+      </div>
+      <div class="campo">
+        <label for="ci-mensaje">Mensaje</label>
+        <textarea id="ci-mensaje" name="mensaje" required placeholder="Cuéntanos brevemente tu situación actual o proceso a evaluar"></textarea>
+      </div>
+        <button type="submit" class="boton boton--primario boton--full">Enviar consulta</button>
+        <p class="campo campo--trampa" aria-hidden="true"><label for="ci-website">Sitio web</label><input type="text" id="ci-website" name="website" tabindex="-1" autocomplete="off"></p>
+        <p class="formulario-confirmacion" hidden style="margin-top:var(--space-sm); color: var(--accent-neon); font-size:0.95rem;">Recibimos tu mensaje. Te responderemos a la brevedad.</p>
+        <p class="formulario-error" hidden></p>
+    </form>
+    <p style="margin-top:var(--space-md); color:rgba(255,255,255,0.65);">
+      O escríbenos directamente a
+      <a href="mailto:contacto@propulsaria.com" style="color:var(--accent-neon); font-weight:600;">contacto@propulsaria.com</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     PIE DE PÁGINA
+     ============================================================ -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div>
+        <a href="index.html" class="pie__marca-enlace" aria-label="PropulsarIA">
+          <img class="pie__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+        </a>
+        <p>Implementación de IA para organizaciones</p>
+        <p class="pie__redes">
+          <a class="icono-linkedin" href="https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="brochure.html" class="boton boton--secundario">Ver brochure</a>
+        </p>
+      </div>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="metodologia.html">Metodología</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="pie__base">
+      <span>© 2026 PropulsarIA</span>
+      <span>contacto@propulsaria.com · Bogotá, Colombia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     WHATSAPP FLOTANTE
+     ============================================================ -->
+<a href="https://wa.me/573152369917?text=Hola%20PropulsarIA%2C%20quiero%20conocer%20sus%20servicios%20de%20asesor%C3%ADa%20en%20implementaci%C3%B3n%20de%20IA%3A%20diagn%C3%B3stico%20organizacional%2C%20hoja%20de%20ruta%20y%20captura%20de%20valor%20para%20mi%20organizaci%C3%B3n." target="_blank" rel="noopener" class="whatsapp-flotante" aria-label="Escríbenos por WhatsApp">
+  <span class="whatsapp-flotante__texto">Escríbenos</span>
+  <span class="whatsapp-flotante__globo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.09c-.25.7-1.24 1.28-2.03 1.45-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.32-5.11-4.52-.15-.2-1.22-1.62-1.22-3.09s.76-2.19 1.03-2.49c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.52.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.22.57.35.08.13.08.72-.17 1.4z"/></svg>
+  </span>
+</a>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/hero-3d.js"></script>
+<script defer src="js/neural-network.js"></script>
+<script defer src="js/section-reveal.js"></script>
+<script defer src="js/background-3d.js"></script>
+</body>
+</html>

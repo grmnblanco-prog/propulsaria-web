@@ -1,0 +1,14 @@
+<svg width="240" height="56" viewBox="0 0 240 56" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="marcaDegradado" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <circle cx="24" cy="28" r="20" fill="none" stroke="url(#marcaDegradado)" stroke-width="2.4"/>
+    <circle cx="24" cy="28" r="9" fill="url(#marcaDegradado)"/>
+    <path d="M24 8 L24 2 M24 54 L24 48 M44 28 L50 28 M-2 28 L4 28" stroke="url(#marcaDegradado)" stroke-width="2.4" stroke-linecap="round" transform="translate(0,0)"/>
+  </g>
+  <text x="58" y="36" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#0F172A">Propulsar<tspan fill="#2563EB">IA</tspan></text>
+</svg>

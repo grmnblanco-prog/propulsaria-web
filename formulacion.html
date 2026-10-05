@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulación de proyectos — PropulsarIA</title>
+<meta name="description" content="Genera con PropulsarIA un proyecto de inversión pública (MGA) o de cooperación internacional, con apoyo de IA.">
+<link rel="canonical" href="https://propulsaria.com/formulacion.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Formulación de proyectos — PropulsarIA">
+<meta property="og:description" content="MGA o cooperación. PropulsarIA formula el proyecto contigo, con apoyo de IA.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://propulsaria.com/formulacion.html">
+<meta property="og:image" content="https://propulsaria.com/public/logo.svg">
+<meta property="og:locale" content="es_CO">
+<link rel="icon" href="public/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js'); window.addEventListener('DOMContentLoaded', function () { setTimeout(function () { var h = document.querySelector('.hero'); if (h) h.classList.add('cargado'); }, 400); });</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<header>
+<nav class="nav" aria-label="Navegación principal">
+  <div class="contenedor nav__interior">
+    <a href="index.html" class="nav__marca" aria-label="PropulsarIA. El portal de la Transformación.">
+      <img class="nav__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+    </a>
+    <ul class="nav__lista">
+      <li><a href="index.html" class="nav__enlace">Inicio</a></li>
+      <li><a href="metodologia.html" class="nav__enlace">Metodología</a></li>
+      <li><a href="servicios.html" class="nav__enlace">Servicios</a></li>
+      <li><a href="proyectos.html" class="nav__enlace activo">Proyectos</a></li>
+      <li><a href="blog.html" class="nav__enlace">Blog</a></li>
+      <li><a href="contacto.html" class="nav__enlace">Contacto</a></li>
+    </ul>
+    <button class="nav__hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero hero--paginas hero--contacto">
+  <div class="hero__canvas hero__canvas--css" aria-hidden="true"></div>
+  <div class="hero__degradado"></div>
+  <div class="hero__contenido contenedor">
+    <div class="etiqueta-eyebrow">Formulación con apoyo de IA</div>
+    <h1><span class="reveal-linea titulo-hero"><span class="texto-degradado">Generar el proyecto</span></span></h1>
+    <p class="hero__eslogan">MGA o cooperación. Cuéntanos el punto de partida y lo formulamos contigo.</p>
+  </div>
+</section>
+
+<div class="divisor-neon" aria-hidden="true"></div>
+
+<section class="seccion">
+  <div class="blob blob--azul" style="width:500px;height:500px;top:-60px;right:-140px;"></div>
+  <div class="contenedor">
+    <div class="max-ancho-lg centrado-h">
+      <form class="formulario-card centrado-h" style="text-align:left;" id="formulario-formulacion" data-asunto="Formulación de proyecto" action="mailto:contacto@propulsaria.com" method="post" enctype="text/plain">
+        <h2 style="font-size:1.5rem; margin-bottom:0.6rem; color:var(--ink);">Pide la formulación</h2>
+        <p style="margin-bottom:1.5rem; color:var(--ink-secondary);">Este formulario es solo para generar un proyecto con MGA IA Assistant o CooperarIA. No es el diagnóstico general.</p>
+        <div class="campo">
+          <label for="f-nombre">Nombre o entidad</label>
+          <input type="text" id="f-nombre" name="nombre" required placeholder="Tu nombre o el de la organización">
+        </div>
+        <div class="campo">
+          <label for="f-correo">Correo electrónico</label>
+          <input type="email" id="f-correo" name="correo" required placeholder="ejemplo@organizacion.com">
+        </div>
+        <div class="campo">
+          <label for="f-telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="f-telefono" name="telefono" placeholder="+57 300 000 0000">
+        </div>
+        <div class="campo">
+          <label for="f-linea">Qué proyecto quieres formular</label>
+          <select id="f-linea" name="linea" required>
+            <option value="">Elige una línea</option>
+            <option value="mga">Inversión pública — MGA</option>
+            <option value="cooperacion">Cooperación internacional</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-idea">De qué se trata</label>
+          <input type="text" id="f-idea" name="idea" required placeholder="Nombre o idea del proyecto, en una frase">
+        </div>
+        <div class="campo">
+          <label for="f-punto">En qué punto está</label>
+          <textarea id="f-punto" name="punto" required placeholder="Idea, borrador, convocatoria abierta, documento a medias…"></textarea>
+        </div>
+        <button type="submit" class="boton boton--primario boton--full">Pedir la formulación</button>
+        <p class="campo campo--trampa" aria-hidden="true"><label for="f-website">Sitio web</label><input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off"></p>
+        <p class="formulario-confirmacion" hidden style="margin-top:var(--space-sm); color: var(--accent); font-size:0.95rem;">Recibimos tu solicitud. Te responderemos a la brevedad.</p>
+        <p class="formulario-error" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div>
+        <a href="index.html" class="pie__marca-enlace" aria-label="PropulsarIA">
+          <img class="pie__logo" src="public/logo-cropped.png" alt="PropulsarIA — El portal de la Transformación" width="280" height="70">
+        </a>
+        <p>Implementación de IA para organizaciones</p>
+        <p class="pie__redes">
+          <a class="icono-linkedin" href="https://www.linkedin.com/in/german-blanco-rodr%C3%ADguez" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="brochure.html" class="boton boton--secundario">Ver brochure</a>
+        </p>
+      </div>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="metodologia.html">Metodología</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="pie__base">
+      <span>© 2026 PropulsarIA</span>
+      <span>contacto@propulsaria.com · Bogotá, Colombia</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573152369917?text=Hola%20PropulsarIA%2C%20quiero%20formular%20un%20proyecto%20con%20apoyo%20de%20IA%20(MGA%20o%20cooperaci%C3%B3n)." target="_blank" rel="noopener" class="whatsapp-flotante" aria-label="Escríbenos por WhatsApp">
+  <span class="whatsapp-flotante__texto">Escríbenos</span>
+  <span class="whatsapp-flotante__globo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.09c-.25.7-1.24 1.28-2.03 1.45-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.32-5.11-4.52-.15-.2-1.22-1.62-1.22-3.09s.76-2.19 1.03-2.49c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.52.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.22.57.35.08.13.08.72-.17 1.4z"/></svg>
+  </span>
+</a>
+
+<script>
+  (function () {
+    var linea = new URLSearchParams(location.search).get('linea');
+    var sel = document.getElementById('f-linea');
+    if (sel && linea && sel.querySelector('option[value="' + linea + '"]')) sel.value = linea;
+  })();
+</script>
+<script defer src="js/main.js"></script>
+<script defer src="js/section-reveal.js"></script>
+<script defer src="js/background-3d.js"></script>
+</body>
+</html>

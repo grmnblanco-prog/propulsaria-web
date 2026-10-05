@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantillas LinkedIn — PropulsarIA</title>
+<link rel="icon" href="public/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:ital,wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #080E1A;
+    --navy-2: #0F172A;
+    --ink: #1E3A8A;
+    --body: #334155;
+    --muted: #64748B;
+    --accent: #2563EB;
+    --accent-2: #3B82F6;
+    --neon: #60A5FA;
+    --soft: #DBEAFE;
+    --paper: #F7F8FA;
+    --white: #fff;
+    --font: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--navy);
+    color: var(--body);
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    line-height: 1.4;
+  }
+  .barra {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; justify-content: center;
+    padding: 0.85rem 1rem; background: var(--navy); color: #DBEAFE;
+    font-family: var(--sans); font-size: 0.88rem;
+  }
+  .barra button, .barra a {
+    font-family: var(--sans); font-weight: 600; border: 0; border-radius: 999px;
+    padding: 0.42rem 0.95rem; background: var(--accent); color: #fff; text-decoration: none; cursor: pointer;
+  }
+  .barra a.sec { background: transparent; border: 1px solid rgba(96,165,250,0.45); }
+  .guia {
+    max-width: 920px; margin: 0 auto; padding: 1.4rem 1.2rem 0.4rem;
+    color: #93C5FD; font-size: 0.95rem;
+  }
+  .guia h1 { color: #fff; font-size: 1.7rem; letter-spacing: -0.03em; margin: 0.25rem 0 0.45rem; }
+  .guia p { color: rgba(219,234,254,0.88); max-width: 68ch; }
+  .guia ol { margin: 0.7rem 0 0 1.15rem; color: #DBEAFE; }
+  .guia li { margin: 0.28rem 0; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.9rem; }
+  .swatch {
+    font-family: var(--sans); font-size: 0.72rem; font-weight: 600;
+    padding: 0.35rem 0.7rem; border-radius: 999px; color: #fff;
+  }
+
+  .seccion { padding: 1.6rem 1.2rem 0.4rem; max-width: 1280px; margin: 0 auto; }
+  .seccion h2 {
+    color: #fff; font-size: 1.15rem; letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.4rem;
+    padding-bottom: 2.4rem;
+  }
+  .marco {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 24px 50px -28px rgba(0,0,0,0.7);
+  }
+  .marco--recurso { aspect-ratio: 4 / 5; }
+  .marco--banner { aspect-ratio: 1.91 / 1; }
+  .lamina {
+    position: absolute; inset: 0;
+    width: 1080px; height: 1080px;
+    transform-origin: top left;
+    color: var(--body);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .marco--recurso .lamina { height: 1350px; }
+  .marco--banner .lamina { width: 1200px; height: 628px; }
+
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 42px 56px 0;
+  }
+  .top img {
+    height: 72px; width: auto; background: #fff; border-radius: 12px; padding: 6px 12px;
+  }
+  .kicker {
+    font-family: var(--sans); font-size: 22px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--neon);
+  }
+  .cuerpo { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 36px 64px 28px; }
+  .pie-lamina {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 56px 40px;
+    font-family: var(--sans); font-size: 22px; font-weight: 650; letter-spacing: 0.04em;
+    color: #93C5FD;
+  }
+  .lamina--clara .pie-lamina { color: var(--muted); }
+  .lamina h2 {
+    font-size: 72px; line-height: 1.08; letter-spacing: -0.035em;
+    color: #fff; margin: 0.18em 0 0.28em;
+  }
+  .lamina--clara h2 { color: var(--ink); }
+  .lamina .lead { font-size: 34px; color: #DBEAFE; max-width: 18ch; }
+  .lamina--clara .lead { color: var(--body); }
+  .dato {
+    font-size: 168px; font-weight: 700; letter-spacing: -0.05em;
+    line-height: 0.9; color: #fff;
+  }
+  .dato span { display: block; font-size: 36px; letter-spacing: 0; margin-top: 18px; color: #DBEAFE; font-weight: 500; }
+  .lista { list-style: none; display: flex; flex-direction: column; gap: 22px; }
+  .lista li { display: grid; grid-template-columns: 72px 1fr; gap: 22px; align-items: start; }
+  .num {
+    width: 72px; height: 72px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-size: 22px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, #1D4ED8, #60A5FA);
+  }
+  .lista strong { display: block; font-size: 34px; color: var(--ink); }
+  .lista span { font-size: 26px; color: var(--body); }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .chip {
+    background: #2563EB; color: #fff; border-radius: 999px;
+    text-align: center; font-family: var(--sans); font-weight: 700;
+    font-size: 28px; padding: 18px 10px;
+  }
+  .chip small { display: block; font-weight: 500; font-size: 20px; opacity: 0.88; margin-top: 4px; }
+  .cta {
+    display: inline-block; background: #2563EB; color: #fff;
+    font-family: var(--sans); font-weight: 700; font-size: 28px;
+    border-radius: 999px; padding: 18px 36px; margin-top: 28px;
+  }
+
+  .lamina--navy {
+    background:
+      radial-gradient(ellipse at 78% 18%, rgba(37,99,235,0.42), transparent 42%),
+      radial-gradient(ellipse at 12% 90%, rgba(96,165,250,0.16), transparent 46%),
+      linear-gradient(180deg, #080E1A 0%, #0B1528 55%, #0F172A 100%);
+  }
+  .lamina--navy::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(96,165,250,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96,165,250,0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at 80% 30%, #000 8%, transparent 72%);
+  }
+  .lamina--clara {
+    background: linear-gradient(180deg, #fff 0%, #F8FBFF 100%);
+  }
+  .lamina--clara .cuerpo { z-index: 1; }
+  .lamina > * { position: relative; z-index: 1; }
+
+  [contenteditable]:focus { outline: 2px dashed rgba(96,165,250,0.65); outline-offset: 6px; }
+
+  @media screen {
+    .lamina { transform: scale(0.278); }
+  }
+
+  @media print {
+    html, body { background: #fff; }
+    .barra, .guia, .seccion h2 { display: none !important; }
+    .seccion { padding: 0; max-width: none; }
+    .galeria { display: block; }
+    .marco, .marco--recurso, .marco--banner {
+      width: 1080px; height: 1080px; aspect-ratio: auto;
+      border-radius: 0; box-shadow: none; overflow: hidden;
+      page-break-after: always; break-after: page;
+    }
+    .marco--recurso { width: 1080px; height: 1350px; }
+    .marco--banner { width: 1200px; height: 628px; }
+    .lamina { transform: none !important; position: relative; inset: auto; }
+    .solo-pantalla { display: none !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none !important; }
+    @page { size: 1080px 1080px; margin: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="barra">
+    <span>Plantillas LinkedIn · 1080×1080</span>
+    <button type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+    <a class="sec" href="index.html">Volver al sitio</a>
+  </div>
+
+  <header class="guia solo-pantalla">
+    <p class="kicker" style="font-size:0.72rem; color:#60A5FA;">Identidad PropulsarIA</p>
+    <h1>Carruseles y recursos para LinkedIn</h1>
+    <p>Misma marca que la web: navy, azul 2563EB, Fraunces y logo sobre fondo blanco. Haz clic en los textos para editarlos. Luego imprime a PDF (un slide por página) y súbelo a LinkedIn como documento, o captura cada recuadro en PNG.</p>
+    <ol>
+      <li>Edita el carrusel de ejemplo (o duplica una pieza suelta).</li>
+      <li>Imprimir → Destino: Guardar como PDF → Márgenes: ninguno → Gráficos de fondo: sí.</li>
+      <li>En LinkedIn: crear publicación → <strong>Documento</strong> → sube el PDF. Cada página se vuelve un slide.</li>
+    </ol>
+    <div class="swatches">
+      <span class="swatch" style="background:#080E1A">#080E1A navy</span>
+      <span class="swatch" style="background:#0F172A">#0F172A</span>
+      <span class="swatch" style="background:#2563EB">#2563EB acento</span>
+      <span class="swatch" style="background:#60A5FA; color:#080E1A">#60A5FA</span>
+      <span class="swatch" style="background:#1E3A8A">#1E3A8A títulos</span>
+      <span class="swatch" style="background:#F7F8FA; color:#0F172A">#F7F8FA papel</span>
+    </div>
+  </header>
+
+  <section class="seccion">
+    <h2>Carrusel listo · 6 slides</h2>
+    <div class="galeria" id="carrusel">
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">Agencia de implementación de IA</p>
+        </div>
+        <div class="cuerpo">
+          <h2 contenteditable="true">Implementar IA no es el desafío. Capturar valor, sí.</h2>
+          <p class="lead" contenteditable="true">Antes de la herramienta está el diagnóstico.</p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>01 / 06</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">El dato</p>
+        </div>
+        <div class="cuerpo">
+          <p class="dato" contenteditable="true">88%<span>implementa IA.</span></p>
+          <p class="lead" style="margin-top:36px; max-width:22ch;" contenteditable="true">Solo el 12% reporta reducción de costos y aumento de ingresos a la vez.</p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>02 / 06</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--clara">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" style="color:#2563EB" contenteditable="true">El mapa, antes de la herramienta</p>
+        </div>
+        <div class="cuerpo">
+          <h2 style="font-size:48px; margin-bottom:28px;" contenteditable="true">Si todavía no empezaste —o ya empezaste y no ves valor— mira estas cinco cosas.</h2>
+          <ul class="lista">
+            <li><span class="num">01</span><div><strong contenteditable="true">Digitalización</strong><span contenteditable="true">La operación real, no el discurso.</span></div></li>
+            <li><span class="num">02</span><div><strong contenteditable="true">Sistemas</strong><span contenteditable="true">Lo que el equipo abre cada mañana.</span></div></li>
+            <li><span class="num">03</span><div><strong contenteditable="true">Integración</strong><span contenteditable="true">Si se copia a mano, la IA hereda el cuello de botella.</span></div></li>
+          </ul>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>03 / 06</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--clara">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" style="color:#2563EB" contenteditable="true">Sigue el mapa</p>
+        </div>
+        <div class="cuerpo">
+          <ul class="lista">
+            <li><span class="num">04</span><div><strong contenteditable="true">Datos</strong><span contenteditable="true">Dónde viven y qué tan limpios están. Sin contexto, la IA improvisa.</span></div></li>
+            <li><span class="num">05</span><div><strong contenteditable="true">Procesos</strong><span contenteditable="true">Lo repetitivo y medible, no lo más “innovador”.</span></div></li>
+          </ul>
+          <p class="lead" style="margin-top:48px;" contenteditable="true">Recién ahí tiene sentido elegir herramienta.</p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>04 / 06</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">El proceso</p>
+        </div>
+        <div class="cuerpo">
+          <h2 style="font-size:52px;" contenteditable="true">Por eso no empezamos por la herramienta.</h2>
+          <div class="chips" style="margin-top:48px;">
+            <div class="chip">Diagnóstico<small>Sistemas, datos, procesos, equipo</small></div>
+            <div class="chip">Hoja de ruta<small>A medida, sin un solo proveedor</small></div>
+            <div class="chip">Quick wins<small>Semanas, no meses</small></div>
+            <div class="chip">Escalado<small>Del piloto a la operación</small></div>
+          </div>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>05 / 06</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">El primer paso</p>
+        </div>
+        <div class="cuerpo">
+          <h2 contenteditable="true">Un diagnóstico gratuito.</h2>
+          <p class="lead" contenteditable="true">Una conversación sobre procesos, datos, talento y gobernanza. Sin compromiso.</p>
+          <p class="cta">www.propulsaria.com</p>
+        </div>
+        <footer class="pie-lamina"><span>contacto@propulsaria.com</span><span>06 / 06</span></footer>
+      </article></div>
+    </div>
+  </section>
+
+  <section class="seccion solo-pantalla">
+    <h2>Piezas sueltas · copia y rellena</h2>
+    <div class="galeria">
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">Portada</p>
+        </div>
+        <div class="cuerpo">
+          <h2 contenteditable="true">Título fuerte en una o dos líneas.</h2>
+          <p class="lead" contenteditable="true">Una frase que anticipa el valor del carrusel.</p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>01 / 0N</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">Cifra</p>
+        </div>
+        <div class="cuerpo">
+          <p class="dato" contenteditable="true">00%<span>Qué significa ese número, en una línea.</span></p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>0N</span></footer>
+      </article></div>
+
+      <div class="marco"><article class="lamina lamina--clara">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" style="color:#2563EB" contenteditable="true">Cita / insight</p>
+        </div>
+        <div class="cuerpo">
+          <h2 style="font-size:58px;" contenteditable="true">“La herramienta se elige después de entender el proceso.”</h2>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>0N</span></footer>
+      </article></div>
+
+      <div class="marco marco--recurso"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">Recurso</p>
+        </div>
+        <div class="cuerpo">
+          <h2 style="font-size:64px;" contenteditable="true">Guía breve: el mapa antes de la herramienta.</h2>
+          <p class="lead" contenteditable="true">Para equipos que están considerando IA o ya la usan y no ven retorno.</p>
+          <p class="cta">Descarga o conversemos</p>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>4:5 · post único</span></footer>
+      </article></div>
+
+      <div class="marco marco--banner"><article class="lamina lamina--navy">
+        <div class="top">
+          <img src="public/logo-cropped.png" alt="PropulsarIA" width="280" height="70" onerror="this.src='public/logo-propulsar.svg'">
+          <p class="kicker" contenteditable="true">Agencia de implementación de IA</p>
+        </div>
+        <div class="cuerpo" style="padding-top:8px;">
+          <h2 style="font-size:48px; max-width:16ch;" contenteditable="true">Antes de la herramienta está el diagnóstico.</h2>
+        </div>
+        <footer class="pie-lamina"><span>www.propulsaria.com</span><span>1200×628 · imagen de post</span></footer>
+      </article></div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      function scale() {
+        document.querySelectorAll(".marco").forEach(function (m) {
+          var lamina = m.querySelector(".lamina");
+          if (!lamina) return;
+          var s = m.clientWidth / lamina.offsetWidth;
+          lamina.style.setProperty("--s", s);
+          lamina.style.transform = "scale(" + s + ")";
+        });
+      }
+      scale();
+      window.addEventListener("resize", scale);
+    })();
+  </script>
+</body>
+</html>

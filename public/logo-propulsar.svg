@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 108" role="img">
+  <title>PropulsarIA</title>
+  <defs>
+    <linearGradient id="bladeA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8EC9FF"/>
+      <stop offset="1" stop-color="#4BA3F5"/>
+    </linearGradient>
+    <linearGradient id="bladeB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5AAEF7"/>
+      <stop offset="1" stop-color="#2F8AE8"/>
+    </linearGradient>
+    <linearGradient id="bladeC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B8EEA"/>
+      <stop offset="1" stop-color="#1F6FD4"/>
+    </linearGradient>
+    <linearGradient id="bladeD" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A74DC"/>
+      <stop offset="1" stop-color="#1859C4"/>
+    </linearGradient>
+    <linearGradient id="bladeE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D5FC8"/>
+      <stop offset="1" stop-color="#1347A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="108" rx="14" fill="#FFFFFF"/>
+  <g transform="translate(6,8)">
+    <path fill="url(#bladeA)" d="M18 78 C22 36 58 4 102 18 C78 26 48 48 32 78 Z"/>
+    <path fill="url(#bladeB)" d="M20 82 C30 44 66 16 106 30 C82 36 54 54 36 82 Z"/>
+    <path fill="url(#bladeC)" d="M22 86 C38 52 74 30 110 42 C86 48 58 62 38 86 Z"/>
+    <path fill="url(#bladeD)" d="M24 90 C44 62 80 44 112 54 C88 60 62 72 40 90 Z"/>
+    <path fill="url(#bladeE)" d="M26 94 C50 72 84 58 114 66 C90 72 64 82 42 94 Z"/>
+    <path fill="#3B8EEA" d="M100 20 L126 56 L100 90 L110 56 Z"/>
+  </g>
+  <text x="150" y="58" fill="#1A1F2B" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-0.6">Propulsar<tspan fill="#2F8AE8">IA</tspan></text>
+  <text x="150" y="86" fill="#1A1F2B" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="500">El portal de la Transformaci&#243;n</text>
+</svg>
